@@ -5,10 +5,15 @@ How to enable wpa_supplicant for AT&amp;T using OpenWRT and bypass the modem/rou
 This is a guide on how to bypass the AT&T Modem/Router using OpenWRT and wpa_supplicant. This method involves having a exploitabled modem such as the BGW210-700. A guide on how to do this is located here [EXPLOIT](https://github.com/bypassrg/att "EXPLOIT"). After extracting and decrypting certificates we upload them to your OpenWRT router.  Download wpa_supplicant package, make init.d script to run on start up.
 
 - ## Requirements
+
 Exploitable Modem
+
 OpenWRT router with wpa_supplicant package
+
 WinSCP software
+
 SSH client such as Putty
+
 
 **1. Extract Certificates and Decode them with tutorial**
 
