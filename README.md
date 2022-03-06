@@ -126,20 +126,18 @@ do
 
       let COUNTER++
       logger -t DEBUG "Attempt #${COUNTER} to reconnect wan"
-  
       ifup wan
-      sleep 30 #sec
+      sleep 5 #sec
 
     else
       PASS=1
       logger -t DEBUG "The wan is connected"
-      wpa_supplicant -D wired -i eth1 -c /etc/config/wpa_supplicant.conf
+      /etc/init.d/wpa_supplicant restart
     fi
       
   else
     PASS=1
     logger -t DEBUG "The wan is connected"
-    wpa_supplicant -D wired -i eth1 -c /etc/config/wpa_supplicant.conf
   fi
 done
 ```
